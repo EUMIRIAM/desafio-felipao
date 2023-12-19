@@ -16,43 +16,27 @@
 //o herói de nome **{nome}** está 
 //no nível de **{nivel}**
 
-let nomeHeroi = "Davi"
-let nivelExperiencias = 10.000
+const nomeHeroi = "Davi"
+const nivelExperiencias = 10_000
 
-if(nivelExperiencias < 1.000){
-    nivelExperiencias = "Ferro"
-    nomeHeroi = "maria"
-}
-if(nivelExperiencias >= 1.001 && nivelExperiencias <= 2.000){
-    nivelExperiencias = "Bronze" 
-    nomeHeroi = "Julio"
-}
-if(nivelExperiencias >= 2.001 && nivelExperiencias <= 5.000){
-    nivelExperiencias = "Prata"
-    nomeHeroi = "Chico"
-}
-if(nivelExperiencias >= 6.001 && nivelExperiencias <= 7.000){
-    nivelExperiencias = "Ouro"
-    nomeHeroi = "Francisco"
+let nivel
 
+if (nivelExperiencias <= 1_000) {
+    nivel = "Ferro"
+} else if (nivelExperiencias <= 2_000) {
+    nivel = "Bronze"
+} else if (nivelExperiencias <= 5_000) {
+    nivel = "Prata"
+} else if (nivelExperiencias <= 7_000) {
+    nivel = "Ouro"
+} else if (nivelExperiencias <= 8_000) {
+    nivel = "Platina"
+} else if (nivelExperiencias <= 9_000){
+    nivel = "Ascendente"
+} else if (nivelExperiencias <= 10_000){
+    nivel = "Imortal"
+} else {
+    nivel = "Radiante"
 }
-if(nivelExperiencias >= 7.001 && nivelExperiencias <= 8.000){
-    nivelExperiencias = "Platina"
-    nomeHeroi = "Tania"
-}
-if(nivelExperiencias >= 8.001 && nivelExperiencias <= 9.000){
-    nivelExperiencias = "Ascendente"
-    nomeHeroi = "Bete"
 
-}
-if(nivelExperiencias >= 9.001 && nivelExperiencias <= 10.000){
-    nivelExperiencias = "Imortal"
-    nomeHeroi = "Davi"
-}
-if(nivelExperiencias >= 10.001){
-    nivelExperiencias = "Radiante"
-    nomeHeroi = "Pedro"
-}
-console.log()
-console.log("O herói:" + nomeHeroi) 
-console.log("O nível de esperiência:" + nivelExperiencias)
+console.log("O herói: " + nomeHeroi + " está no nível de esperiência: " + nivel)
